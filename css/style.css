@@ -36,7 +36,7 @@ a {
   background-color: #fff;
 }
 
-.navbar-search-icon {
+.navbar-search-icon {<li class="tweet-card">
   color: #66757f;
 }
 

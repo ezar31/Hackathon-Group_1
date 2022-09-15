@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Twitter Bootsrap v4 Clone</title>
+  <title>Twitter KW 4</title>
   
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <!-- <script src="crud.js"></script> -->
   <!-- Fixed top navbar -->
 <nav class="navbar navbar-toggleable-md fixed-top">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,11 +68,13 @@
   <!-- Profile background large image -->
   <div class="row profile-background">
     <div class="container">
+      <!-- <img src="bgTwitter.jpg" alt="Girl in a jacket" width="500" height="600"> -->
 	  <!-- User main avatar -->
       <div class="avatar-container">
-        <div class="avatar">
-
-        </div>
+        <img class="avatar" src="prabowo.jfif" alt="abang ganteng" width="1000" height="50">
+        <!-- <div class="avatar">
+          isi nya FOTO pak Prabowo masih muda YGY
+        </div> -->
       </div>
     </div>
   </div>
@@ -122,10 +125,10 @@
         <!-- Left column -->
         <div class="profile-header">
           <!-- Header information -->
-          <h3 class="profile-fullname"><a>Jon Vadillo<a></h3>
-          <h2 class="profile-element"><a>@jonvadillo</a></h2>
-          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-link"></i>&nbsp;jonvadillo.com</a>
-          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-location"></i>&nbsp;Vitoria-Gasteiz, Spain</a>
+          <h3 class="profile-fullname"><a>Prabowo Rio<a></h3>
+          <h2 class="profile-element"><a>@riosubiyanto</a></h2>
+          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-link"></i>&nbsp;rioprabowo.com</a>
+          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-location"></i>&nbsp;Jonggol, Indonesia</a>
           <h2 class="profile-element"><i class="octicon octicon-calendar"></i>Joined November 2012</h2>
           <button class="btn btn-search-bar tweet-to-btn">Tweet to Jon Vadillo</button>
           <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-file-media"></i>1,142 Photos and videos</a>
@@ -152,19 +155,28 @@
       <div class="col-6">
         <ol class="tweet-list">
           <li class="tweet-card">
-            <div class="tweet-content">
+              <!-- INI BUAT NGETWEED YAA!! -->
+              <input type="text" class="form-control input-search" placeholder="What's happening?" name="srch-term" id="post">
+              <div class="tweet-footer">
+                <button class="btn btn-search-bar" onclick="tweetBaru()">Tweet</button>
+              </div>
+          </li>
+          <li class="tweet-card" id="newPost">
+            <!-- INI ISI KONTEN -->
+            
+            <!-- <div class="tweet-content">
               <div class="tweet-header">
                 <span class="fullname">
                   <strong>Jon Vadillo</strong>
                 </span>
-                <span class="username">@JonVadillo</span>
+                <span class="username">@JonVadillo</span> 
                 <span class="tweet-time">- Jul 18</span>
               </div>
               <a>
                 <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
               </a>
               <div class="tweet-text">
-                <p class="" lang="es" data-aria-label-part="0">¡Nuevo artículo en Mozilla!<br>Resuelto: Corregido – Una breve historia sobre un error reportado por la comunidad <a href="https://t.co/dqg5hVQXA0" class="twitter-timeline-link" target="_blank"><span class="">https://www.mozilla-hispano.org/</span></a>                  <a href="" class="twitter-hashtag"><s>#</s><b>firefox</b></a> <a href="" class="twitter-hashtag"><s>#</s><b>comunidad</b></a>
+                <p id="newPost" lang="es" data-aria-label-part="0">INI POST KITA DI AWAL YG TEMPLATE</p>
                   <a href="" class="twitter-hashtag" dir="ltr"></a>
                 </p>
               </div>
@@ -181,8 +193,9 @@
                 <a class="tweet-footer-btn">
                   <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
                 </a>
+                
               </div>
-            </div>
+            </div> -->
           </li>
         </ol>
         <!-- End: tweet list -->
@@ -199,12 +212,12 @@
             <ol class="tweet-list">
               <li class="tweet-card">
                 <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+                  <img class="tweet-card-avatar" src="prabowo.jfif" alt="">
                   <div class="tweet-header">
                     <span class="fullname">
-                  <strong>Jon Vadillo</strong>
+                  <strong>Prabowo Rio</strong>
                 </span>
-                    <span class="username">@JonVadillo</span>
+                    <span class="username">@riosubiyanto</span>
                   </div>
 
                   <button class="btn btn-follow">Follow</button>
@@ -217,10 +230,10 @@
       </div>
     </div>
   </div>
-  <script src='https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'></script>
+  <!-- <script src='https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script> -->
 
-  
+  <script src="crud.js"></script>
 </body>
-</html>
+</html>                                                   
