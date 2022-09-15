@@ -8,6 +8,7 @@
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <!-- Custom css-->
   <link rel="stylesheet" href="css/style.css">
 
@@ -51,8 +52,7 @@
     <!-- END: Navbar Search form -->
     <!-- Navbar User menu -->
     <div class="dropdown navbar-user-dropdown">
-      <button class="btn btn-secondary dropdown-toggle btn-circle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <button class="btn btn-secondary dropdown-toggle btn-circle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
@@ -90,7 +90,7 @@
             <li class="profile-stats-item-active">
               <a>
                 <span class="profile-stats-item profile-stats-item-label">Tweets</span>
-                <span class="profile-stats-item profile-stats-item-number">51</span>
+                <span id="totalTweets" class="profile-stats-item profile-stats-item-number">51</span>
               </a>
             </li>
             <li>
@@ -158,7 +158,7 @@
               <!-- INI BUAT NGETWEED YAA!! -->
               <input type="text" class="form-control input-search" placeholder="What's happening?" name="srch-term" id="post">
               <div class="tweet-footer">
-                <button class="btn btn-search-bar" onclick="tweetBaru()">Tweet</button>
+                <button id="tweetPush" class="btn btn-search-bar" onclick="tweetBaru()">Tweet</button>
               </div>
           </li>
           <li class="tweet-card" id="newPost">
@@ -173,7 +173,7 @@
                 <span class="tweet-time">- Jul 18</span>
               </div>
               <a>
-                <img class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
+                <img id="tweetCardAvatar" class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
               </a>
               <div class="tweet-text">
                 <p id="newPost" lang="es" data-aria-label-part="0">INI POST KITA DI AWAL YG TEMPLATE</p>
@@ -193,7 +193,9 @@
                 <a class="tweet-footer-btn">
                   <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
                 </a>
-                
+                <a class="tweet-footer-btn">
+                  <i id="trash" class="bi bi-trash"></i>
+                </a>
               </div>
             </div> -->
           </li>
