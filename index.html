@@ -9,72 +9,29 @@
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css'>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <!-- Custom css-->
   <link rel="stylesheet" href="css/style.css">
 
   
 </head>
 
 <body>
-  <!-- <script src="crud.js"></script> -->
-  <!-- Fixed top navbar -->
 <nav class="navbar navbar-toggleable-md fixed-top">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse container">
-    <!-- Navbar navigation links -->
     <ul class="navbar-nav mr-auto">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="octicon octicon-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="octicon octicon-zap"></i> Moments</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="octicon octicon-bell"></i> Notifications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="octicon octicon-inbox"></i> Messages</a>
-      </li> -->
     </ul>
-    <!-- END: Navbar navigation links -->
-    <!-- Navbar Search form -->
-    <!-- <form class="navbar-form" role="search">
-      <div class="input-group">
-        <input type="text" class="form-control input-search" placeholder="Search pantun kwikwiw" name="srch-term" id="srch-term">
-        <div class="input-group-btn">
-          <button class="btn btn-default btn-search" type="submit"><i class="octicon octicon-search navbar-search-icon"></i></button>
-        </div>
-      </div>
-    </form> -->
-    <!-- END: Navbar Search form -->
-    <!-- Navbar User menu -->
-    <!-- <div class="dropdown navbar-user-dropdown">
-      <button class="btn btn-secondary dropdown-toggle btn-circle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-      </div>
-    </div> -->
-    <!-- END: Navbar User menu -->
-    <!-- Navbar Tweet button -->
-    <button class="btn btn-search-bar">logout</button>
+    <button class="btn btn-search-bar" onClick=location.href="login.html" value='Log out'>logout</button>
   </div>
 </nav>
-<!-- END: Fixed top navbar -->
 <div class="main-container">
-  <!-- Profile background large image -->
   <div class="row profile-background">
     <img src="bgPantun.jpeg" alt="Girl in a jacket" width="100%" height="100%">
     <div class="container">
-	  <!-- User main avatar -->
       <div class="avatar-container">
         <img class="avatar" src="prabowo.jfif" alt="abang ganteng" width="1000" height="50">
-        <!-- <div class="avatar">
-          isi nya FOTO pak Prabowo masih muda YGY
-        </div> -->
       </div>
     </div>
   </div>
@@ -89,14 +46,14 @@
           <ul>
             <li class="profile-stats-item-active">
               <a>
-                <span class="profile-stats-item profile-stats-item-label">Tweets</span>
+                <span class="profile-stats-item profile-stats-item-label">Posts</span>
                 <span id="totalTweets" class="profile-stats-item profile-stats-item-number">0</span>
               </a>
             </li>
             <li>
               <a>
                 <span class="profile-stats-item profile-stats-item-label">Following</span>
-                <span class="profile-stats-item profile-stats-item-number">0</span>
+                <span id="tambah-follow" class="profile-stats-item profile-stats-item-number">0</span>
               </a>
             </li>
             <li>
@@ -136,16 +93,7 @@
             <!-- Image grid -->
             <div class="row">
               <div class="col pic-col"><img src="https://pbs.twimg.com/media/DFCq7iTXkAADXE-.jpg:thumb" height="73px" class=""></div>
-              <!-- <div class="col pic-col"><img src="https://pbs.twimg.com/media/DEoQ0vyXoBA1cwQ.png:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DDVbW4RXsAAasuw.jpg:thumb" height="73px" class=""></div> -->
             </div>
-            <!-- End: row -->
-            <!-- <div class="row">
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DFCq7iTXkAADXE-.jpg:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DEoQ0vyXoBA1cwQ.png:thumb" height="73px" class=""></div>
-              <div class="col pic-col"><img src="https://pbs.twimg.com/media/DDVbW4RXsAAasuw.jpg:thumb" height="73px" class=""></div>
-            </div> -->
-            <!-- End: row -->
           </div>
           <!-- End: image grid -->
         </div>
@@ -162,42 +110,6 @@
               </div>
           </li>
           <li class="tweet-card" id="newPost">
-            <!-- INI ISI KONTEN -->
-            
-            <!-- <div class="tweet-content">
-              <div class="tweet-header">
-                <span class="fullname">
-                  <strong>Jon Vadillo</strong>
-                </span>
-                <span class="username">@JonVadillo</span> 
-                <span class="tweet-time">- Jul 18</span>
-              </div>
-              <a>
-                <img id="tweetCardAvatar" class="tweet-card-avatar" src="https://pbs.twimg.com/profile_images/679974972278849537/bzzb-6H4_bigger.jpg" alt="">
-              </a>
-              <div class="tweet-text">
-                <p id="newPost" lang="es" data-aria-label-part="0">INI POST KITA DI AWAL YG TEMPLATE</p>
-                  <a href="" class="twitter-hashtag" dir="ltr"></a>
-                </p>
-              </div>
-              <div class="tweet-footer">
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-comment" aria-hidden="true"></i><span> 18</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-sync" aria-hidden="true"></i><span> 64</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-heart" aria-hidden="true"></i><span> 202</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i class="octicon octicon-mail" aria-hidden="true"></i><span> 155</span>
-                </a>
-                <a class="tweet-footer-btn">
-                  <i id="trash" class="bi bi-trash"></i>
-                </a>
-              </div>
-            </div> -->
           </li>
         </ol>
         <!-- End: tweet list -->
@@ -214,16 +126,16 @@
             <ol class="tweet-list">
               <li class="tweet-card">
                 <div class="tweet-content">
-                  <img class="tweet-card-avatar" src="prabowo.jfif" alt="">
+                  <img class="tweet-card-avatar" src="bgPantun.jpeg" alt="">
                   <div class="tweet-header">
                     <span class="fullname">
-                  <strong>Prabowo Rio</strong><br>
+                  <strong>Ezar</strong><br>
                 </span>
-                    <span class="username">@riosubiyanto</span>
+                    <span class="username">@EzarRts</span>
                     <br></br>
                   </div>
 
-                  <button class="btn btn-follow">rekomendasi sobat pantun!</button>
+                  <button id="add-follow" class="btn btn-follow" onclick="follow()">follow sobat pantun!</button>
                 </div>
               </li>
             </ol>

@@ -1,16 +1,14 @@
-let db_UserPost = []; //ini isinya OBJ
+let db_UserPost = [];
 let allPostHtml = [];
 let i = 0;
-//     INI bagian CREATE (tweet baru)
 function tweetBaru() {
   let getPost = document.getElementById("post").value;
-  //   alert(getPost);
   let obj = {
     fullname: `Group ${i}`,
     username: "@hackathon",
     tweet: getPost,
     love: 0,
-  }; // OBJ ini nanti akan di pusk ke array db_UserPost
+  };
   db_UserPost.push(obj);
   console.log(db_UserPost);
   let date = new Date();
@@ -52,46 +50,24 @@ function tweetBaru() {
   output += "</div>";
   output += '<div class="tweet-footer">';
   output += '  <a class="tweet-footer-btn">';
-  output +=
-    '    <i class="octicon octicon-comment" aria-hidden="true"></i><span> 0</span>';
-  output += "  </a>";
-  output += '  <a class="tweet-footer-btn">';
-  output +=
-    '    <i class="octicon octicon-sync" aria-hidden="true"></i><span> 0</span>';
-  output += "  </a>";
-  output += '  <a class="tweet-footer-btn">';
   output += `    <i class="octicon octicon-heart" aria-hidden="true"></i><span> ${db_UserPost[i].love}</span>`;
   output += "  </a>";
-  output += '  <a class="tweet-footer-btn">';
-  output +=
-    '    <i class="octicon octicon-mail" aria-hidden="true"></i><span> 0</span>';
-  output += "  </a>";
-  output += '<a class="tweet-footer-btn">';
-  //   output += `<i class="bi bi-trash" ><input id='trash' type="button" value=${i} onclick="deleteTweet(this.value)"></i>`;
+  output += '<a class="tweet-footer-btn"> <br></br>'; 
   output += `<button id='trash' type="submit" class="btn btn-follow" value=${i} onclick="deleteTweet(this.value)">Delete</button>`;
-  //   output += `<button type="button" value=${i} onclick="deleteTweet(this.value)>delete</button>`;
   output += "</a>";
   output += "</div>";
   output += "</div>";
 
   let plus = 1 * document.getElementById("totalTweets").innerHTML;
-  //   alert(plus);
   document.getElementById("totalTweets").innerHTML = plus + 1;
   document.getElementById("newPost").innerHTML = output;
-  //   document.getElementById("newPost").innerHTML = `${result}`;
-  //   return result;
   allPostHtml.push(output);
   showTweet(allPostHtml);
   i++;
 }
 
 function deleteTweet(del) {
-  //   let del = event.target.parent;
-  //   //   let idx = del.children[0];
-  //   console.log(del);
-  //   alert(del);
   let minus = 1 * document.getElementById("totalTweets").innerHTML;
-  //   alert(plus);
   document.getElementById("totalTweets").innerHTML = minus - 1;
   allPostHtml[del] = "";
   showTweet(allPostHtml);
@@ -103,48 +79,6 @@ function showTweet(html) {
     result += html[i];
   }
   document.getElementById("newPost").innerHTML = result;
-}
-// console.log(db_UserPost);
-
-function recomendedUser(username){
-  // let output = '<div class="tweet-content">';
-  // output += '<div class="tweet-header">';
-  // output += '  <span class="fullname">';
-  // output += "   <strong>Prabowo Rio</strong>";
-  // output += "  </span>";
-  // output += '  <span class="username">@riosubiyanto</span>';
-  // output += `  <span class="tweet-time">- ${mon} ${day}</span>`;
-  // output += "</div>";
-  // output += "<a>";
-  // output +=
-  //   '  <img id="tweetCardAvatar" class="tweet-card-avatar" src="prabowo.jfif" alt="">';
-  // output += "</a>";
-  // output += '<div class="tweet-text">';
-  // output += `<p id="newPost" lang="es" data-aria-label-part="0">${db_UserPost[i].tweet}</p>`;
-  // output += '   <a href="" class="twitter-hashtag" dir="ltr"></a>';
-  // output += "  </p>";
-  // output += "</div>";
-  // output += '<div class="tweet-footer">';
-  // output += '  <a class="tweet-footer-btn">';
-  // output += `    <i class="octicon octicon-heart" aria-hidden="true"></i><span> ${db_UserPost[i].love}</span>`;
-  // output += "  </a>";
-  // output += '<a class="tweet-footer-btn">';
-  // //   output += `<i class="bi bi-trash" ><input id='trash' type="button" value=${i} onclick="deleteTweet(this.value)"></i>`;
-  // output += `<button id='trash' type="submit" class="btn btn-follow" value=${i} onclick="deleteTweet(this.value)">Delete</button>`;
-  // //   output += `<button type="button" value=${i} onclick="deleteTweet(this.value)>delete</button>`;
-  // output += "</a>";
-  // output += "</div>";
-  // output += "</div>";
-
-  // let plus = 1 * document.getElementById("totalTweets").innerHTML;
-  // //   alert(plus);
-  // document.getElementById("totalTweets").innerHTML = plus + 1;
-  // document.getElementById("newPost").innerHTML = output;
-  // //   document.getElementById("newPost").innerHTML = `${result}`;
-  // //   return result;
-  // allPostHtml.push(output);
-  // showTweet(allPostHtml);
-  // i++;  
 }
 
 /* INI BAGIAN LOGIN YAA!*/
@@ -160,3 +94,30 @@ let db_user = [
 ];
 
 //  Functionnya dibawah ini yaa
+
+// Function Login
+function loginValidation(
+  uID = document.getElementById("username").value,
+  uPass = document.getElementById("password").value
+) {
+  let isValid = false;
+  for (let i = 0; i < db_user.length; i++) {
+    if (uID === db_user[i].username && uPass === db_user[i].password) {
+      isValid = true;
+      break;
+    }
+  }
+  if (isValid) {
+    location.replace("index.html");
+  } else {
+    alert(`username atau password salah!`);
+  }
+}
+
+// Function follow
+function follow() {
+  let plus = 1 * document.getElementById("tambah-follow").innerHTML;
+  if (plus < 1) {
+    document.getElementById('tambah-follow').innerHTML = plus + 1
+  }
+}
