@@ -70,8 +70,8 @@ function tweetBaru() {
   //   output += `<i class="bi bi-trash" ><input id='trash' type="button" value=${i} onclick="deleteTweet(this.value)"></i>`;
   output += `<button id='trash' type="submit" class="btn btn-follow" value=${i} onclick="deleteTweet(this.value)">Delete</button>`;
   //   output += `<button type="button" value=${i} onclick="deleteTweet(this.value)>delete</button>`;
-  output += "             </a>";
-  output += "  </div>";
+  output += "</a>";
+  output += "</div>";
   output += "</div>";
 
   let plus = 1 * document.getElementById("totalTweets").innerHTML;
@@ -106,16 +106,75 @@ function showTweet(html) {
 }
 // console.log(db_UserPost);
 
+function recomendedUser(username){
+  // let output = '<div class="tweet-content">';
+  // output += '<div class="tweet-header">';
+  // output += '  <span class="fullname">';
+  // output += "   <strong>Prabowo Rio</strong>";
+  // output += "  </span>";
+  // output += '  <span class="username">@riosubiyanto</span>';
+  // output += `  <span class="tweet-time">- ${mon} ${day}</span>`;
+  // output += "</div>";
+  // output += "<a>";
+  // output +=
+  //   '  <img id="tweetCardAvatar" class="tweet-card-avatar" src="prabowo.jfif" alt="">';
+  // output += "</a>";
+  // output += '<div class="tweet-text">';
+  // output += `<p id="newPost" lang="es" data-aria-label-part="0">${db_UserPost[i].tweet}</p>`;
+  // output += '   <a href="" class="twitter-hashtag" dir="ltr"></a>';
+  // output += "  </p>";
+  // output += "</div>";
+  // output += '<div class="tweet-footer">';
+  // output += '  <a class="tweet-footer-btn">';
+  // output += `    <i class="octicon octicon-heart" aria-hidden="true"></i><span> ${db_UserPost[i].love}</span>`;
+  // output += "  </a>";
+  // output += '<a class="tweet-footer-btn">';
+  // //   output += `<i class="bi bi-trash" ><input id='trash' type="button" value=${i} onclick="deleteTweet(this.value)"></i>`;
+  // output += `<button id='trash' type="submit" class="btn btn-follow" value=${i} onclick="deleteTweet(this.value)">Delete</button>`;
+  // //   output += `<button type="button" value=${i} onclick="deleteTweet(this.value)>delete</button>`;
+  // output += "</a>";
+  // output += "</div>";
+  // output += "</div>";
+
+  // let plus = 1 * document.getElementById("totalTweets").innerHTML;
+  // //   alert(plus);
+  // document.getElementById("totalTweets").innerHTML = plus + 1;
+  // document.getElementById("newPost").innerHTML = output;
+  // //   document.getElementById("newPost").innerHTML = `${result}`;
+  // //   return result;
+  // allPostHtml.push(output);
+  // showTweet(allPostHtml);
+  // i++;  
+}
+
 /* INI BAGIAN LOGIN YAA!*/
 let db_user = [
   {
-    username: prabowo,
-    password: menhan123,
+    username: 'prabowo',
+    password: 'menhan123',
   },
   {
-    username: ezar,
-    password: jangan123,
+    username: 'ezar',
+    password: 'jangan123',
   },
 ];
 
 //  Functionnya dibawah ini yaa
+
+function loginValidation(
+  uID = document.getElementById("username").value,
+  uPass = document.getElementById("password").value
+) {
+  let isValid = false;
+  for (let i = 0; i < db_user.length; i++) {
+    if (uID === db_user[i].username && uPass === db_user[i].password) {
+      isValid = true;
+      break;
+    }
+  }
+  if (isValid) {
+    location.replace("index.html");
+  } else {
+    alert(`username atau password salah!`);
+  }
+}
