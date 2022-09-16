@@ -52,7 +52,7 @@ function tweetBaru() {
   output += '  <a class="tweet-footer-btn">';
   output += `    <i class="octicon octicon-heart" aria-hidden="true"></i><span> ${db_UserPost[i].love}</span>`;
   output += "  </a>";
-  output += '<a class="tweet-footer-btn"> <br></br>'; 
+  output += '<a class="tweet-footer-btn"> <br></br>';
   output += `<button id='trash' type="submit" class="btn btn-follow" value=${i} onclick="deleteTweet(this.value)">Delete</button>`;
   output += "</a>";
   output += "</div>";
@@ -84,12 +84,12 @@ function showTweet(html) {
 /* INI BAGIAN LOGIN YAA!*/
 let db_user = [
   {
-    username: prabowo,
-    password: menhan123,
+    username: "prabowo",
+    password: "menhan123",
   },
   {
-    username: ezar,
-    password: jangan123,
+    username: "ezar",
+    password: "jangan123",
   },
 ];
 
@@ -100,6 +100,7 @@ function loginValidation(
   uID = document.getElementById("username").value,
   uPass = document.getElementById("password").value
 ) {
+  // alert(uID);
   let isValid = false;
   for (let i = 0; i < db_user.length; i++) {
     if (uID === db_user[i].username && uPass === db_user[i].password) {
@@ -108,7 +109,7 @@ function loginValidation(
     }
   }
   if (isValid) {
-    location.replace("index.html");
+    location.replace("myHome.html");
   } else {
     alert(`username atau password salah!`);
   }
@@ -118,6 +119,6 @@ function loginValidation(
 function follow() {
   let plus = 1 * document.getElementById("tambah-follow").innerHTML;
   if (plus < 1) {
-    document.getElementById('tambah-follow').innerHTML = plus + 1
+    document.getElementById("tambah-follow").innerHTML = plus + 1;
   }
 }
