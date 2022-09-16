@@ -2,7 +2,7 @@
 <html >
 <head>
   <meta charset="UTF-8">
-  <title>Twitter KW 4</title>
+  <title>Cuit Pantun</title>
   
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
@@ -26,7 +26,7 @@
   <div class="collapse navbar-collapse container">
     <!-- Navbar navigation links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link" href="#"><i class="octicon octicon-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -37,37 +37,37 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="octicon octicon-inbox"></i> Messages</a>
-      </li>
+      </li> -->
     </ul>
     <!-- END: Navbar navigation links -->
     <!-- Navbar Search form -->
-    <form class="navbar-form" role="search">
+    <!-- <form class="navbar-form" role="search">
       <div class="input-group">
-        <input type="text" class="form-control input-search" placeholder="Search Twitter" name="srch-term" id="srch-term">
+        <input type="text" class="form-control input-search" placeholder="Search pantun kwikwiw" name="srch-term" id="srch-term">
         <div class="input-group-btn">
           <button class="btn btn-default btn-search" type="submit"><i class="octicon octicon-search navbar-search-icon"></i></button>
         </div>
       </div>
-    </form>
+    </form> -->
     <!-- END: Navbar Search form -->
     <!-- Navbar User menu -->
-    <div class="dropdown navbar-user-dropdown">
+    <!-- <div class="dropdown navbar-user-dropdown">
       <button class="btn btn-secondary dropdown-toggle btn-circle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
         <a class="dropdown-item" href="#">Something else here</a>
       </div>
-    </div>
+    </div> -->
     <!-- END: Navbar User menu -->
     <!-- Navbar Tweet button -->
-    <button class="btn btn-search-bar">Tweet</button>
+    <button class="btn btn-search-bar">logout</button>
   </div>
 </nav>
 <!-- END: Fixed top navbar -->
 <div class="main-container">
   <!-- Profile background large image -->
   <div class="row profile-background">
-    <img src="bgTwitter.jpg" alt="Girl in a jacket" width="100%" height="100%">
+    <img src="bgPantun.jpeg" alt="Girl in a jacket" width="100%" height="100%">
     <div class="container">
 	  <!-- User main avatar -->
       <div class="avatar-container">
@@ -90,25 +90,25 @@
             <li class="profile-stats-item-active">
               <a>
                 <span class="profile-stats-item profile-stats-item-label">Tweets</span>
-                <span id="totalTweets" class="profile-stats-item profile-stats-item-number">51</span>
+                <span id="totalTweets" class="profile-stats-item profile-stats-item-number">0</span>
               </a>
             </li>
             <li>
               <a>
                 <span class="profile-stats-item profile-stats-item-label">Following</span>
-                <span class="profile-stats-item profile-stats-item-number">420</span>
+                <span id="tambah-follow" class="profile-stats-item profile-stats-item-number">0</span>
               </a>
             </li>
             <li>
               <a>
                 <span class="profile-stats-item profile-stats-item-label">Followers</span>
-                <span class="profile-stats-item profile-stats-item-number">583</span>
+                <span class="profile-stats-item profile-stats-item-number">0</span>
               </a>
             </li>
             <li>
               <a>
                 <span class="profile-stats-item profile-stats-item-label">Likes</span>
-                <span class="profile-stats-item profile-stats-item-number">241</span>
+                <span class="profile-stats-item profile-stats-item-number">0</span>
               </a>
             </li>
           </ul>
@@ -130,8 +130,8 @@
           <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-link"></i>&nbsp;rioprabowo.com</a>
           <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-location"></i>&nbsp;Jonggol, Indonesia</a>
           <h2 class="profile-element"><i class="octicon octicon-calendar"></i>Joined November 2012</h2>
-          <button class="btn btn-search-bar tweet-to-btn">Tweet to Jon Vadillo</button>
-          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-file-media"></i>1,142 Photos and videos</a>
+          <button class="btn btn-search-bar tweet-to-btn">yok ngobrol santuy..</button>
+          <a class="profile-element profile-website" hrerf=""><i class="octicon octicon-file-media"></i>1 Photo diabadikan</a>
           <div class="pic-grid">
             <!-- Image grid -->
             <div class="row">
@@ -156,9 +156,9 @@
         <ol class="tweet-list">
           <li class="tweet-card">
               <!-- INI BUAT NGETWEED YAA!! -->
-              <input type="text" class="form-control input-search" placeholder="What's happening?" name="srch-term" id="post">
+              <input type="text" class="form-control input-search" placeholder="pantun atau tebak-tebakan?" name="srch-term" id="post">
               <div class="tweet-footer">
-                <button id="tweetPush" class="btn btn-search-bar" onclick="tweetBaru()">Tweet</button>
+                <button id="tweetPush" class="btn btn-search-bar" onclick="tweetBaru()">cakep!!</button>
               </div>
           </li>
           <li class="tweet-card" id="newPost">
@@ -206,7 +206,7 @@
       <div class="col right-col">
         <div class="content-panel">
           <div class="panel-header">
-            <h4>Who to follow</h4><small><a href="">Refresh</a></small><small><a href="">View all</a></small>
+            <h4>rekomendasi</h4><small><a href="">Refresh</a></small>
           </div>
           <!-- Who to Follow panel -->
           <div class="panel-content">
@@ -217,12 +217,13 @@
                   <img class="tweet-card-avatar" src="prabowo.jfif" alt="">
                   <div class="tweet-header">
                     <span class="fullname">
-                  <strong>Prabowo Rio</strong>
+                  <strong>Prabowo Rio</strong><br>
                 </span>
                     <span class="username">@riosubiyanto</span>
+                    <br></br>
                   </div>
 
-                  <button class="btn btn-follow">Follow</button>
+                  <button id="add-follow" class="btn btn-follow" onclick="follow()">rekomendasi sobat pantun!</button>
                 </div>
               </li>
             </ol>
