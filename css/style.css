@@ -4,7 +4,7 @@ body {
 }
 
 a {
-  color: #1DA1F2;
+  color: burlywood;
 }
 
 @media screen and (min-width: 1236px) {
@@ -14,7 +14,7 @@ a {
 }
 /* Top Navbar elements' styles */
 .navbar {
-  background-color: #fff;
+  background-color: antiquewhite;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 .navbar-nav > li a {
@@ -49,17 +49,17 @@ a {
 
 .btn-search-bar {
   border-radius: 100px;
-  border: 1px solid #1da1f2;
+  border: 1px solid bisque;
   color: #fff;
-  background-color: #4AB3F4;
+  background-color: burlywood;
   border-color: transparent;
   font-weight: bold;
   font-size: 14px;
 }
 
 .btn-search-bar:hover{
-      background-color: #1DA1F2;
-    border-color: #1DA1F2;
+      background-color: burlywood;
+    border-color: burlywood;
   cursor:pointer;
 }
 
@@ -128,7 +128,7 @@ a {
 .profile-stats-item-active {
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  border-color: #1DA1F2 !important;
+  border-color: burlywood !important;
 }
 
 .profile-stats-item-label {
@@ -251,10 +251,10 @@ a {
 }
 
 .btn-follow {
-  border-color: #1DA1F2;
-  color: #1DA1F2;
-  background-color: #fff;
-  border: 1px solid #1da1f2;
+  border-color: crim;
+  color: white;
+  background-color: burlywood;
+  border: 1px solid antiquewhite;
   display: block;
   font-size: 12px;
   line-height: 16px;
@@ -268,7 +268,7 @@ a {
 }
 
 .btn-follow:hover {
-  background-color: #E8F5FD;
+  background-color: burlywood;
 }
 /* END: Right column*/
 
